@@ -18,7 +18,6 @@ pub struct SwapInfo {
     pub pools: Vec<String>,
 }
 
-
 #[cw_serde]
 pub struct BotInfo {
     pub bot: String,

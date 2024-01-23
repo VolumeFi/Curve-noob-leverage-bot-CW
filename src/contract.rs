@@ -324,8 +324,7 @@ pub mod execute {
                     )));
                     let mut token_pools: Vec<Token> = vec![];
                     for pool in bot.swap_info.pools {
-                        token_pools
-                            .push(Token::Address(Address::from_str(pool.as_str()).unwrap()));
+                        token_pools.push(Token::Address(Address::from_str(pool.as_str()).unwrap()));
                     }
                     token_swap_info.push(Token::FixedArray(token_pools));
                     token_swap_infos.push(Token::Array(token_swap_info));
@@ -350,8 +349,7 @@ pub mod execute {
                 let mut token_swap_info: Vec<Token> = vec![];
                 let mut token_route: Vec<Token> = vec![];
                 for route in bot.swap_info.route {
-                    token_route
-                        .push(Token::Address(Address::from_str(route.as_str()).unwrap()));
+                    token_route.push(Token::Address(Address::from_str(route.as_str()).unwrap()));
                 }
                 token_swap_info.push(Token::FixedArray(token_route));
                 let mut token_swap_params: Vec<Token> = vec![];
@@ -373,8 +371,7 @@ pub mod execute {
                 )));
                 let mut token_pools: Vec<Token> = vec![];
                 for pool in bot.swap_info.pools {
-                    token_pools
-                        .push(Token::Address(Address::from_str(pool.as_str()).unwrap()));
+                    token_pools.push(Token::Address(Address::from_str(pool.as_str()).unwrap()));
                 }
                 token_swap_info.push(Token::FixedArray(token_pools));
                 token_swap_infos.push(Token::Array(token_swap_info));
