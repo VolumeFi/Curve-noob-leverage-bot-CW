@@ -12,7 +12,7 @@ use std::collections::BTreeMap;
 use std::str::FromStr;
 
 // version info for migration info
-const CONTRACT_NAME: &str = "crates.io:limit-order-bot-univ2-cw";
+const CONTRACT_NAME: &str = "crates.io:curve-squeeze-bot";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
 #[cfg_attr(not(feature = "library"), entry_point)]
@@ -327,7 +327,7 @@ pub mod execute {
                         token_pools.push(Token::Address(Address::from_str(pool.as_str()).unwrap()));
                     }
                     token_swap_info.push(Token::FixedArray(token_pools));
-                    token_swap_infos.push(Token::Array(token_swap_info));
+                    token_swap_infos.push(Token::Tuple(token_swap_info));
                     WITHDRAW_TIMESTAMP.save(
                         deps.storage,
                         (bot.bot.to_owned(), "repay".to_string()),
@@ -374,7 +374,7 @@ pub mod execute {
                     token_pools.push(Token::Address(Address::from_str(pool.as_str()).unwrap()));
                 }
                 token_swap_info.push(Token::FixedArray(token_pools));
-                token_swap_infos.push(Token::Array(token_swap_info));
+                token_swap_infos.push(Token::Tuple(token_swap_info));
                 WITHDRAW_TIMESTAMP.save(
                     deps.storage,
                     (bot.bot.to_owned(), "repay".to_string()),
