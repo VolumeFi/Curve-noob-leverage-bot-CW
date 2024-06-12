@@ -1,5 +1,5 @@
 [package]
-name = "curve-leverage-lending-bot-cw"
+name = "curve-squeeze-bot-cw"
 version = "0.1.0"
 authors = ["wc117"]
 edition = "2021"

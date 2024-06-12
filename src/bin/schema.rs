@@ -1,6 +1,6 @@
 use cosmwasm_schema::write_api;
 
-use curve_leverage_lending_bot_cw::msg::{ExecuteMsg, InstantiateMsg, QueryMsg};
+use curve_squeeze_bot_cw::msg::{ExecuteMsg, InstantiateMsg, QueryMsg};
 
 fn main() {
     write_api! {
