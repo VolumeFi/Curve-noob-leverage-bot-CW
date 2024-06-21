@@ -249,7 +249,7 @@ pub mod execute {
                         },
                         Param {
                             name: "swap_infos".to_string(),
-                            kind: ParamType::Array(Box::new(ParamType::Array(Box::new(
+                            kind: ParamType::Array(Box::new(
                                 ParamType::Tuple(vec![
                                     ParamType::FixedArray(Box::new(ParamType::Address), 11),
                                     ParamType::FixedArray(
@@ -263,7 +263,7 @@ pub mod execute {
                                     ParamType::Uint(256),
                                     ParamType::FixedArray(Box::new(ParamType::Address), 5),
                                 ]),
-                            )))),
+                            )),
                             internal_type: None,
                         },
                     ],
