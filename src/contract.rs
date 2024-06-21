@@ -249,21 +249,19 @@ pub mod execute {
                         },
                         Param {
                             name: "swap_infos".to_string(),
-                            kind: ParamType::Array(Box::new(ParamType::Array(Box::new(
-                                ParamType::Tuple(vec![
-                                    ParamType::FixedArray(Box::new(ParamType::Address), 11),
-                                    ParamType::FixedArray(
-                                        Box::new(ParamType::FixedArray(
-                                            Box::new(ParamType::Uint(256)),
-                                            5,
-                                        )),
+                            kind: ParamType::Array(Box::new(ParamType::Tuple(vec![
+                                ParamType::FixedArray(Box::new(ParamType::Address), 11),
+                                ParamType::FixedArray(
+                                    Box::new(ParamType::FixedArray(
+                                        Box::new(ParamType::Uint(256)),
                                         5,
-                                    ),
-                                    ParamType::Uint(256),
-                                    ParamType::Uint(256),
-                                    ParamType::FixedArray(Box::new(ParamType::Address), 5),
-                                ]),
-                            )))),
+                                    )),
+                                    5,
+                                ),
+                                ParamType::Uint(256),
+                                ParamType::Uint(256),
+                                ParamType::FixedArray(Box::new(ParamType::Address), 5),
+                            ]))),
                             internal_type: None,
                         },
                     ],
